@@ -16,6 +16,7 @@ const Image = styled.img`
 const Nav = () => {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
     const loadCodCountries = async () => {
@@ -29,6 +30,15 @@ const Nav = () => {
   }, []);
 
   const onChangeHandler = text => {
+    let matches = [];
+    if (text.length > 0) {
+      matches = countries.filter(country => {
+        const regex = new RegExp(`${text}`, 'gi');
+        return String(country['CLDR display name']).match(regex);
+      });
+    }
+    console.log('matches', matches);
+    setSuggestions(matches);
     setCountry(text);
   };
 
@@ -36,7 +46,6 @@ const Nav = () => {
     <Nave>
       <div className="container">
         <Image src={logo} alt="NewsApp" />
-        {country}
         <input
           type="text"
           onChange={e => onChangeHandler(e.target.value)}
