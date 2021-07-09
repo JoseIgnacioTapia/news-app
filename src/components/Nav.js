@@ -11,6 +11,7 @@ const Nave = styled.nav`
 
 const Image = styled.img`
   width: 180px;
+  height: 50px;
 `;
 
 const Nav = () => {
@@ -29,6 +30,11 @@ const Nav = () => {
     loadCodCountries();
   }, []);
 
+  const onSuggestHandler = text => {
+    setCountry(text);
+    setSuggestions([]);
+  };
+
   const onChangeHandler = text => {
     let matches = [];
     if (text.length > 0) {
@@ -44,13 +50,32 @@ const Nav = () => {
 
   return (
     <Nave>
-      <div className="container">
+      <div className="container-nav">
         <Image src={logo} alt="NewsApp" />
-        <input
-          type="text"
-          onChange={e => onChangeHandler(e.target.value)}
-          value={country}
-        />
+        <div>
+          <input
+            type="text"
+            onChange={e => onChangeHandler(e.target.value)}
+            value={country}
+            onBlur={() => {
+              setTimeout(() => {
+                setSuggestions([]);
+              }, 100); // Waiting for one click
+            }}
+          />
+          {suggestions &&
+            suggestions.map((suggestion, i) => (
+              <div
+                className="suggestion"
+                key={i}
+                onClick={() =>
+                  onSuggestHandler(suggestion['CLDR display name'])
+                }
+              >
+                {suggestion['CLDR display name']}
+              </div>
+            ))}
+        </div>
       </div>
     </Nave>
   );
