@@ -3,11 +3,15 @@ import Nav from './components/Nav';
 import './App.css';
 
 function App() {
+  const [countrySelected, saveCountrySelected] = useState(null);
   const [optionSelected, saveOptionSelected] = useState(null);
 
   return (
     <div className="container">
-      <Nav saveOptionSelected={saveOptionSelected} />
+      <Nav
+        saveOptionSelected={saveOptionSelected}
+        saveCountrySelected={saveCountrySelected}
+      />
     </div>
   );
 }

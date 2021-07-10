@@ -15,7 +15,7 @@ const Image = styled.img`
   height: 50px;
 `;
 
-const Nav = ({ saveOptionSelected }) => {
+const Nav = ({ saveOptionSelected, saveCountrySelected }) => {
   const OPTIONS = [
     { value: 'general', label: 'General' },
     { value: 'business', label: 'Business' },
@@ -53,7 +53,7 @@ const Nav = ({ saveOptionSelected }) => {
   // Submit to the form to pass the category to App.js
   const searchNews = e => {
     e.preventDefault();
-
+    saveCountrySelected(country);
     saveOptionSelected(option);
   };
 
@@ -77,6 +77,7 @@ const Nav = ({ saveOptionSelected }) => {
         <form onSubmit={searchNews}>
           <input
             type="text"
+            placeholder="Please type a country"
             onChange={e => onChangeHandler(e.target.value)}
             value={country}
             onBlur={() => {
