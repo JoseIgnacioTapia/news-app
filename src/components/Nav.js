@@ -15,7 +15,7 @@ const Image = styled.img`
   height: 50px;
 `;
 
-const Nav = () => {
+const Nav = ({ saveOptionSelected }) => {
   const OPTIONS = [
     { value: 'general', label: 'General' },
     { value: 'business', label: 'Business' },
@@ -50,6 +50,13 @@ const Nav = () => {
     setSuggestions([]);
   };
 
+  // Submit to the form to pass the category to App.js
+  const searchNews = e => {
+    e.preventDefault();
+
+    saveOptionSelected(option);
+  };
+
   const onChangeHandler = text => {
     let matches = [];
     if (text.length > 0) {
@@ -67,7 +74,7 @@ const Nav = () => {
     <Nave>
       <div className="container-nav">
         <Image src={logo} alt="NewsApp" />
-        <form>
+        <form onSubmit={searchNews}>
           <input
             type="text"
             onChange={e => onChangeHandler(e.target.value)}
@@ -92,6 +99,7 @@ const Nav = () => {
               </div>
             ))}
           <SelectOptions />
+          <input type="submit" value="Search" />
         </form>
       </div>
     </Nave>
