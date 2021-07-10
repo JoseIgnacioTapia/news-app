@@ -4,16 +4,16 @@ import Message from './components/Message';
 import './App.css';
 
 function App() {
-  const [countrySelected, saveCountrySelected] = useState(null);
+  const [codCountrySelected, saveCodCountrySelected] = useState(null);
   const [optionSelected, saveOptionSelected] = useState(null);
 
   return (
     <div className="container">
       <Nav
         saveOptionSelected={saveOptionSelected}
-        saveCountrySelected={saveCountrySelected}
+        saveCodCountrySelected={saveCodCountrySelected}
       />
-      {countrySelected === '' ? (
+      {codCountrySelected === '' ? (
         <Message msg="You must enter a country" bgColor="#dc3545" />
       ) : null}
     </div>

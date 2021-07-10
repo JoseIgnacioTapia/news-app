@@ -15,7 +15,7 @@ const Image = styled.img`
   height: 50px;
 `;
 
-const Nav = ({ saveOptionSelected, saveCountrySelected }) => {
+const Nav = ({ saveOptionSelected, saveCodCountrySelected }) => {
   const OPTIONS = [
     { value: 'general', label: 'General' },
     { value: 'business', label: 'Business' },
@@ -53,7 +53,7 @@ const Nav = ({ saveOptionSelected, saveCountrySelected }) => {
   // Submit to the form to pass the category to App.js
   const searchNews = e => {
     e.preventDefault();
-    saveCountrySelected(country);
+    saveCodCountrySelected(codCountry);
     saveOptionSelected(option);
   };
 
