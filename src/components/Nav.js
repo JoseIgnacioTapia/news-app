@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import logo from '../img/logo.png';
 import styled from 'styled-components';
+import { useSelect } from '../hooks/useSelect';
 
 const Nave = styled.nav`
   background: #fff;
@@ -15,9 +16,23 @@ const Image = styled.img`
 `;
 
 const Nav = () => {
+  const OPTIONS = [
+    { value: 'general', label: 'General' },
+    { value: 'business', label: 'Business' },
+    { value: 'entertainment', label: 'Entertainment' },
+    { value: 'health', label: 'Health' },
+    { value: 'science', label: 'Science' },
+    { value: 'sports', label: 'Sports' },
+    { value: 'technology', label: 'Technology' },
+  ];
+
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('');
+  const [codCountry, setCodCountry] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+
+  // Custom Hook
+  const [option, SelectOptions] = useSelect('general', OPTIONS);
 
   useEffect(() => {
     const loadCodCountries = async () => {
@@ -52,7 +67,7 @@ const Nav = () => {
     <Nave>
       <div className="container-nav">
         <Image src={logo} alt="NewsApp" />
-        <div>
+        <form>
           <input
             type="text"
             onChange={e => onChangeHandler(e.target.value)}
@@ -68,14 +83,16 @@ const Nav = () => {
               <div
                 className="suggestion"
                 key={i}
-                onClick={() =>
-                  onSuggestHandler(suggestion['CLDR display name'])
-                }
+                onClick={() => {
+                  onSuggestHandler(suggestion['CLDR display name']);
+                  setCodCountry(suggestion['ISO3166-1-Alpha-2']);
+                }}
               >
                 {suggestion['CLDR display name']}
               </div>
             ))}
-        </div>
+          <SelectOptions />
+        </form>
       </div>
     </Nave>
   );
