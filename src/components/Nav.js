@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './Nav.css';
 import logo from '../img/logo.png';
 import styled from 'styled-components';
 import { useSelect } from '../hooks/useSelect';
@@ -74,7 +75,7 @@ const Nav = ({ saveOptionSelected, saveCodCountrySelected }) => {
     <Nave>
       <div className="container-nav">
         <Image src={logo} alt="NewsApp" />
-        <form onSubmit={searchNews}>
+        <form onSubmit={searchNews} className="container-form">
           <input
             type="text"
             placeholder="Please type a country"
@@ -86,21 +87,23 @@ const Nav = ({ saveOptionSelected, saveCodCountrySelected }) => {
               }, 100); // Waiting for one click
             }}
           />
-          {suggestions &&
-            suggestions.map((suggestion, i) => (
-              <div
-                className="suggestion"
-                key={i}
-                onClick={() => {
-                  onSuggestHandler(suggestion['CLDR display name']);
-                  setCodCountry(suggestion['ISO3166-1-Alpha-2']);
-                }}
-              >
-                {suggestion['CLDR display name']}
-              </div>
-            ))}
+          <div className="container-suggestion">
+            {suggestions &&
+              suggestions.map((suggestion, i) => (
+                <div
+                  className="suggestion"
+                  key={i}
+                  onClick={() => {
+                    onSuggestHandler(suggestion['CLDR display name']);
+                    setCodCountry(suggestion['ISO3166-1-Alpha-2']);
+                  }}
+                >
+                  {suggestion['CLDR display name']}
+                </div>
+              ))}
+          </div>
           <SelectOptions />
-          <input type="submit" value="Search" />
+          <input type="submit" value="Search" className="btn-search" />
         </form>
       </div>
     </Nave>
