@@ -80,3 +80,32 @@ form.container-form {
 .suggestion:hover {
   background-color: rgb(223, 220, 220);
 }
+
+/* Mobile */
+@media screen and (max-width: 1040px) {
+  .container-nav {
+    grid-template-columns: 1fr;
+    grid-gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  img {
+    margin: auto;
+  }
+
+  .container-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-form input[type='text'],
+  .container-form select {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .container-form input[type='submit'] {
+    width: 50%;
+  }
+}

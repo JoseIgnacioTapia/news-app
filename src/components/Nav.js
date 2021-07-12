@@ -87,24 +87,25 @@ const Nav = ({ saveOptionSelected, saveCodCountrySelected }) => {
               }, 100); // Waiting for one click
             }}
           />
-          <div className="container-suggestion">
-            {suggestions &&
-              suggestions.map((suggestion, i) => (
-                <div
-                  className="suggestion"
-                  key={i}
-                  onClick={() => {
-                    onSuggestHandler(suggestion['CLDR display name']);
-                    setCodCountry(suggestion['ISO3166-1-Alpha-2']);
-                  }}
-                >
-                  {suggestion['CLDR display name']}
-                </div>
-              ))}
-          </div>
+
           <SelectOptions />
           <input type="submit" value="Search" className="btn-search" />
         </form>
+      </div>
+      <div className="container-suggestion">
+        {suggestions &&
+          suggestions.map((suggestion, i) => (
+            <div
+              className="suggestion"
+              key={i}
+              onClick={() => {
+                onSuggestHandler(suggestion['CLDR display name']);
+                setCodCountry(suggestion['ISO3166-1-Alpha-2']);
+              }}
+            >
+              {suggestion['CLDR display name']}
+            </div>
+          ))}
       </div>
     </Nave>
   );
