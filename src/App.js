@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Nav from './components/Nav';
 import Message from './components/Message';
+import Showcase from './components/Showcase';
 import './App.css';
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
       />
       {codCountrySelected === '' ? (
         <Message msg="You must enter a country" bgColor="#dc3545" />
+      ) : null}
+      {data.length > 0 ? (
+        <Showcase optionSelected={optionSelected} data={data[0]} />
       ) : null}
     </div>
   );
