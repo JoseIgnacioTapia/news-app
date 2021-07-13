@@ -54,7 +54,7 @@ const Nav = ({ saveOptionSelected, saveCodCountrySelected }) => {
   // Submit to the form to pass the category to App.js
   const searchNews = e => {
     e.preventDefault();
-    saveCodCountrySelected(codCountry);
+    saveCodCountrySelected(codCountry.toLowerCase());
     saveOptionSelected(option);
   };
 
