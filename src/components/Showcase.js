@@ -1,12 +1,12 @@
 import React from 'react';
 import './Showcase.css';
+import { capitalize } from '../helpers/capitalize';
 
 const Showcase = ({ optionSelected, data }) => {
   // Extracting Information
   const { urlToImage, url, title, description, source } = data;
 
-  let category =
-    optionSelected.charAt(0).toUpperCase() + optionSelected.slice(1);
+  let category = capitalize(optionSelected);
 
   let styles = {
     backgroundImage: `url(${urlToImage})`,
