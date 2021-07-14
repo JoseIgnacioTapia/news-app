@@ -9,3 +9,11 @@
   padding: 0 2rem;
   overflow: hidden;
 }
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #c72727;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+}

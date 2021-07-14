@@ -1,0 +1,56 @@
+/* Color variables */
+$clr-light: #ffb300;
+$clr-med: #e53935;
+$clr-dark: #d81b60;
+
+/* Border radius */
+$radius: 2rem;
+
+$animation: cubic-bezier(0.76, 0, 0.24, 1);
+
+.loading {
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading__dot {
+  height: 2rem;
+  width: 1.5rem;
+  border-radius: $radius;
+  display: inline-block;
+  margin: 0.5rem;
+  animation: loading 6s $animation infinite;
+  vertical-align: middle;
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    background-color: $clr-light;
+    height: 2rem;
+  }
+  20% {
+    height: 10rem;
+  }
+  40% {
+    height: 2rem;
+  }
+  50% {
+    background-color: $clr-dark;
+    height: 2rem;
+  }
+  70% {
+    height: 10rem;
+  }
+  90% {
+    height: 2rem;
+  }
+}
+
+@for $i from 1 through 5 {
+  .loading__dot:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.2}s;
+  }
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Nav from './components/Nav';
 import Message from './components/Message';
 import Showcase from './components/Showcase';
+import Loader from './components/Loader';
 import './App.css';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
   let url = `https://newsapi.org/v2/top-headlines?country=${codCountrySelected}&category=${optionSelected}&apiKey=4dc2f56899c94121919a5ba5b43406d8`;
 
   useEffect(() => {
+    // Cleaning the screen
+    setData([]);
+
     const fetchData = async () => {
       setLoading(true);
 
@@ -47,6 +51,7 @@ function App() {
         saveOptionSelected={saveOptionSelected}
         saveCodCountrySelected={saveCodCountrySelected}
       />
+      {loading && <Loader />}
       {codCountrySelected === '' ? (
         <Message msg="You must enter a country" bgColor="#dc3545" />
       ) : null}
