@@ -7,8 +7,6 @@ const Showcase = ({ optionSelected, data }) => {
   // Extracting Information
   const { urlToImage, url, title, description, source } = data;
 
-  // Colours by category
-
   let category = capitalize(optionSelected);
 
   let styles = {

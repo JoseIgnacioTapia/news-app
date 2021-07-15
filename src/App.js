@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import Message from './components/Message';
 import Showcase from './components/Showcase';
 import Loader from './components/Loader';
+import SectionNews from './components/SectionNews';
 import './App.css';
 
 function App() {
@@ -56,7 +57,10 @@ function App() {
         <Message msg="You must enter a country" bgColor="#dc3545" />
       ) : null}
       {data.length > 0 ? (
-        <Showcase optionSelected={optionSelected} data={data[0]} />
+        <>
+          <Showcase optionSelected={optionSelected} data={data[0]} />
+          <SectionNews optionSelected={optionSelected} data={data} />
+        </>
       ) : null}
     </div>
   );
