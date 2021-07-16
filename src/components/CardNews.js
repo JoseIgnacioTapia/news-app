@@ -1,6 +1,7 @@
 import { useCategory } from '../hooks/useCategory';
 import { capitalize } from '../helpers/capitalize';
 import './CardNews.css';
+import Link from './Link';
 
 const CardNews = ({ optionSelected, news }) => {
   // Extracting Information
@@ -25,9 +26,10 @@ const CardNews = ({ optionSelected, news }) => {
       <Category />
       <h3>{title}</h3>
       <p>{description}</p>
-      <a href={url} target="_blank" rel="noreferrer">
+      {/* <a type="button" href={url} target="_blank" rel="noreferrer">
         Read More
-      </a>
+      </a> */}
+      <Link url={url} />
     </article>
   );
 };

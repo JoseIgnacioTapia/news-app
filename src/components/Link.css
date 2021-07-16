@@ -1,0 +1,26 @@
+.link-content {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.link-content .arrow-next {
+  margin-left: 0.5rem;
+}
+
+.link-text:link,
+.link-text:visited {
+  font-size: 1.1rem;
+  color: #a2acb9;
+  display: inline-block;
+  text-decoration: none;
+}
+
+svg {
+  transition: all 0.25s ease;
+}
+
+.link-content a:hover ~ svg {
+  transform: translateX(5px);
+}

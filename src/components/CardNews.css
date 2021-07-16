@@ -2,3 +2,18 @@
   background-color: #fff;
   padding: 1rem;
 }
+
+.card-image {
+  position: relative;
+}
+
+.card-image > .card-title {
+  margin-bottom: 5px;
+  color: #fff;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
