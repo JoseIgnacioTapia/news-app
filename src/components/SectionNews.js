@@ -1,16 +1,11 @@
 import CardNews from './CardNews';
+import './SectionNews.css';
 
 const SectionNews = ({ optionSelected, data }) => {
   const newsList = data.slice(1);
 
-  let styles = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gridGap: '1rem',
-  };
-
   return (
-    <section style={styles}>
+    <section className="section-news">
       {newsList.map(news => {
         return (
           <CardNews

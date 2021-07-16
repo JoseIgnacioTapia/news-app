@@ -1,6 +1,13 @@
 .card {
   background-color: #fff;
   padding: 1rem;
+  height: auto;
+  align-self: start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .card-image {

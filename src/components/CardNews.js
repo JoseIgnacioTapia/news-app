@@ -23,12 +23,9 @@ const CardNews = ({ optionSelected, news }) => {
   return (
     <article className="card">
       {imagen}
-      <Category />
+      <Category className="category" />
       <h3>{title}</h3>
       <p>{description}</p>
-      {/* <a type="button" href={url} target="_blank" rel="noreferrer">
-        Read More
-      </a> */}
       <Link url={url} />
     </article>
   );
