@@ -18,7 +18,7 @@ const CardNews = ({ optionSelected, news }) => {
   let category = capitalize(optionSelected);
 
   // Custom Hook
-  const [state, Category] = useCategory(category, optionSelected);
+  const Category = useCategory(category, optionSelected);
 
   return (
     <article className="card">

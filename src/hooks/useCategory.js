@@ -30,5 +30,5 @@ export const useCategory = (categoryTitle, category) => {
 
   const Category = () => <div style={styles}>{categoryTitle}</div>;
 
-  return [state, Category];
+  return Category;
 };

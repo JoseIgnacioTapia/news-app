@@ -5,7 +5,7 @@ import { capitalize } from '../helpers/capitalize';
 
 const Showcase = ({ optionSelected, data }) => {
   // Extracting Information
-  const { urlToImage, url, title, description, source } = data;
+  const { urlToImage, url, title, description } = data;
 
   let category = capitalize(optionSelected);
 
@@ -17,7 +17,7 @@ const Showcase = ({ optionSelected, data }) => {
   };
 
   // Custom Hook
-  const [state, Category] = useCategory(category, optionSelected);
+  const Category = useCategory(category, optionSelected);
 
   return (
     <div style={styles} className="showcase">

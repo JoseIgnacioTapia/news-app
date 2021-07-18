@@ -39,7 +39,7 @@ const Nav = ({ saveOptionSelected, saveCodCountrySelected }) => {
     const loadCodCountries = async () => {
       const response = await fetch('/country-codes_json.json');
       const data = await response.json();
-      console.log(data);
+
       setCountries(data);
     };
 
@@ -66,7 +66,7 @@ const Nav = ({ saveOptionSelected, saveCodCountrySelected }) => {
         return String(country['CLDR display name']).match(regex);
       });
     }
-    console.log('matches', matches);
+
     setSuggestions(matches);
     setCountry(text);
   };

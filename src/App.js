@@ -57,7 +57,7 @@ function App() {
       {codCountrySelected === '' ? (
         <Message msg="You must enter a country" bgColor="#dc3545" />
       ) : null}
-      {data.length > 0 ? (
+      {data.length > 0 && codCountrySelected !== '' ? (
         <>
           <Showcase optionSelected={optionSelected} data={data[0]} />
           <SectionNews optionSelected={optionSelected} data={data} />
@@ -69,3 +69,5 @@ function App() {
 }
 
 export default App;
+
+// Pending: warning for error state & showcase image

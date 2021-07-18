@@ -1,7 +1,7 @@
 .link-content {
   margin: 1rem 0;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
