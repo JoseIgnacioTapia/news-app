@@ -37,7 +37,7 @@ function App() {
         const json = await res.json();
         setData(json.articles);
       } catch (error) {
-        setData(null);
+        setData([]);
         setError(error);
       } finally {
         setLoading(false);
