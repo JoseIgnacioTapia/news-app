@@ -7,7 +7,11 @@ export const useSelect = (initialOption, options) => {
   const SelectOptions = () => (
     <select value={option} onChange={e => setOption(e.target.value)}>
       {options.map(option => (
-        <option key={option.value} value={option.value}>
+        <option
+          key={option.value}
+          value={option.value}
+          style={{ fontWeight: 'bold' }}
+        >
           {option.label}
         </option>
       ))}

@@ -4,6 +4,7 @@ import Message from './components/Message';
 import Showcase from './components/Showcase';
 import Loader from './components/Loader';
 import SectionNews from './components/SectionNews';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
           <SectionNews optionSelected={optionSelected} data={data} />
         </>
       ) : null}
+      <Footer />
     </div>
   );
 }
