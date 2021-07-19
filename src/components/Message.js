@@ -7,6 +7,7 @@ const Message = ({ msg, bgColor }) => {
     textAlign: 'center',
     color: '#fff',
     fontWeight: 'bold',
+    fontSize: '1.25rem',
     backgroundColor: bgColor,
   };
 

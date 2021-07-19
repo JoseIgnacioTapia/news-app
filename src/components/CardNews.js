@@ -5,12 +5,12 @@ import Link from './Link';
 
 const CardNews = ({ optionSelected, news }) => {
   // Extracting Information
-  const { urlToImage, url, title, description, source } = news;
+  const { image, url, title, description, source } = news;
 
   // Checking If It have Image
-  const imagen = urlToImage ? (
+  const imagen = image ? (
     <div className="card-image">
-      <img src={urlToImage} alt="title" />
+      <img src={image} alt="title" />
       <span className="card-title">{source.name}</span>
     </div>
   ) : null;

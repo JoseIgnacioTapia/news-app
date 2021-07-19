@@ -18,7 +18,7 @@ const Image = styled.img`
 
 const Nav = ({ saveOptionSelected, saveCodCountrySelected }) => {
   const OPTIONS = [
-    { value: 'general', label: 'General' },
+    { value: 'nation', label: 'General' },
     { value: 'business', label: 'Business' },
     { value: 'entertainment', label: 'Entertainment' },
     { value: 'health', label: 'Health' },
@@ -33,11 +33,11 @@ const Nav = ({ saveOptionSelected, saveCodCountrySelected }) => {
   const [suggestions, setSuggestions] = useState([]);
 
   // Custom Hook
-  const [option, SelectOptions] = useSelect('general', OPTIONS);
+  const [option, SelectOptions] = useSelect('nation', OPTIONS);
 
   useEffect(() => {
     const loadCodCountries = async () => {
-      const response = await fetch('/country-codes_json.json');
+      const response = await fetch('/countriesCod.json');
       const data = await response.json();
 
       setCountries(data);
@@ -87,7 +87,12 @@ const Nav = ({ saveOptionSelected, saveCodCountrySelected }) => {
               }, 100); // Waiting for one click
             }}
           />
-
+          <input
+            type="button"
+            value="X"
+            className="btn"
+            onClick={() => setCountry('')}
+          />
           <SelectOptions />
           <input type="submit" value="Search" className="btn-search" />
         </form>

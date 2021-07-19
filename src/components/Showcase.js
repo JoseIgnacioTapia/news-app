@@ -5,12 +5,12 @@ import { capitalize } from '../helpers/capitalize';
 
 const Showcase = ({ optionSelected, data }) => {
   // Extracting Information
-  const { urlToImage, url, title, description } = data;
+  const { image, url, title, description } = data;
 
   let category = capitalize(optionSelected);
 
   let styles = {
-    backgroundImage: `url(${urlToImage})`,
+    backgroundImage: `url(${image})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -24,7 +24,6 @@ const Showcase = ({ optionSelected, data }) => {
       <div className="container">
         <div className="showcase-container">
           <div className="showcase-content">
-            {/* <div className="category ">{category}</div> */}
             <Category />
             <h1>{title}</h1>
             <p>{description}</p>

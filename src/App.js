@@ -9,13 +9,13 @@ import './App.css';
 
 function App() {
   const [codCountrySelected, saveCodCountrySelected] = useState(null);
-  const [optionSelected, saveOptionSelected] = useState(null);
+  const [optionSelected, saveOptionSelected] = useState('breaking-news');
 
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  let url = `https://newsapi.org/v2/top-headlines?country=${codCountrySelected}&category=${optionSelected}&apiKey=4dc2f56899c94121919a5ba5b43406d8`;
+  let url = `https://gnews.io/api/v4/top-headlines?country=${codCountrySelected}&topic=${optionSelected}&token=9eccf917d81a015e55f719ce3fdc3354`;
 
   useEffect(() => {
     // Cleaning the screen
@@ -55,7 +55,10 @@ function App() {
       />
       {loading && <Loader />}
       {codCountrySelected === '' ? (
-        <Message msg="You must enter a country" bgColor="#dc3545" />
+        <Message
+          msg="Sorry, you must enter an available country. Try again please"
+          bgColor="#dc3545"
+        />
       ) : null}
       {data.length > 0 && codCountrySelected !== '' ? (
         <>

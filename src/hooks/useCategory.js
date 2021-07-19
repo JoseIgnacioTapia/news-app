@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const colours = {
-  general: '#577590',
+  nation: '#577590',
   business: '#43aa8b',
   entertainment: '#f94144',
   health: '#90be6d',

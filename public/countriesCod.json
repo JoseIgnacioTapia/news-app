@@ -1,0 +1,122 @@
+[
+  {
+    "CLDR display name": "Australia",
+    "ISO3166-1-Alpha-2": "au"
+  },
+  {
+    "CLDR display name": "Brazil",
+    "ISO3166-1-Alpha-2": "br"
+  },
+  {
+    "CLDR display name": "Canada",
+    "ISO3166-1-Alpha-2": "ca"
+  },
+  {
+    "CLDR display name": "Switzerland",
+    "ISO3166-1-Alpha-2": "ch"
+  },
+  {
+    "CLDR display name": "China",
+    "ISO3166-1-Alpha-2": "cn"
+  },
+  {
+    "CLDR display name": "Germany",
+    "ISO3166-1-Alpha-2": "de"
+  },
+  {
+    "CLDR display name": "Egypt",
+    "ISO3166-1-Alpha-2": "eg"
+  },
+  {
+    "CLDR display name": "Spain",
+    "ISO3166-1-Alpha-2": "es"
+  },
+  {
+    "CLDR display name": "France",
+    "ISO3166-1-Alpha-2": "fr"
+  },
+  {
+    "CLDR display name": "United Kigdom",
+    "ISO3166-1-Alpha-2": "gb"
+  },
+  {
+    "CLDR display name": "Greece",
+    "ISO3166-1-Alpha-2": "gr"
+  },
+  {
+    "CLDR display name": "Hong Kong",
+    "ISO3166-1-Alpha-2": "hk"
+  },
+  {
+    "CLDR display name": "Ireland",
+    "ISO3166-1-Alpha-2": "gb"
+  },
+  {
+    "CLDR display name": "Israel",
+    "ISO3166-1-Alpha-2": "il"
+  },
+  {
+    "CLDR display name": "India",
+    "ISO3166-1-Alpha-2": "in"
+  },
+  {
+    "CLDR display name": "Italy",
+    "ISO3166-1-Alpha-2": "it"
+  },
+  {
+    "CLDR display name": "Japan",
+    "ISO3166-1-Alpha-2": "jp"
+  },
+  {
+    "CLDR display name": "Netherlands",
+    "ISO3166-1-Alpha-2": "nl"
+  },
+  {
+    "CLDR display name": "Norway",
+    "ISO3166-1-Alpha-2": "no"
+  },
+  {
+    "CLDR display name": "Peru",
+    "ISO3166-1-Alpha-2": "pe"
+  },
+  {
+    "CLDR display name": "Philippines",
+    "ISO3166-1-Alpha-2": "ph"
+  },
+  {
+    "CLDR display name": "Pakistan",
+    "ISO3166-1-Alpha-2": "ph"
+  },
+  {
+    "CLDR display name": "Portugal",
+    "ISO3166-1-Alpha-2": "pt"
+  },
+  {
+    "CLDR display name": "Romania",
+    "ISO3166-1-Alpha-2": "ro"
+  },
+  {
+    "CLDR display name": "Russian Federation",
+    "ISO3166-1-Alpha-2": "ru"
+  },
+  {
+    "CLDR display name": "Sweden",
+    "ISO3166-1-Alpha-2": "se"
+  },
+  {
+    "CLDR display name": "Singapore",
+    "ISO3166-1-Alpha-2": "sg"
+  },
+  {
+    "CLDR display name": "Taiwan",
+    "ISO3166-1-Alpha-2": "tw"
+  },
+  {
+    "CLDR display name": "Ukraine",
+    "ISO3166-1-Alpha-2": "ua"
+  },
+  {
+    "CLDR display name": "United States",
+    "ISO3166-1-Alpha-2": "us"
+  }
+]
