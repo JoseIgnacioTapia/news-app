@@ -54,6 +54,7 @@ function App() {
         saveCodCountrySelected={saveCodCountrySelected}
       />
       {loading && <Loader />}
+      {error && <p>Hay un error</p>}
       {codCountrySelected === '' ? (
         <Message
           msg="Sorry, you must enter an available country. Try again please"
