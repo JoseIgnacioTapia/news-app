@@ -9,18 +9,22 @@ const Showcase = ({ optionSelected, data }) => {
 
   let category = capitalize(optionSelected);
 
-  let styles = {
-    backgroundImage: `url(${urlToImage})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-  };
-
   // Custom Hook
   const Category = useCategory(category, optionSelected);
 
   return (
-    <div style={styles} className="showcase">
+    <div className="showcase">
+      <img
+        src={urlToImage}
+        alt=""
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          height: '50vh',
+          width: '100%',
+        }}
+      />
       <div className="container">
         <div className="showcase-container">
           <div className="showcase-content">

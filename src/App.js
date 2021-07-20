@@ -54,6 +54,7 @@ function App() {
         saveCodCountrySelected={saveCodCountrySelected}
       />
       {loading && <Loader />}
+      {error && <p>Hay un error</p>}
       {codCountrySelected === '' ? (
         <Message msg="You must enter a country" bgColor="#dc3545" />
       ) : null}

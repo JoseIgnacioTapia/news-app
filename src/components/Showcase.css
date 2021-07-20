@@ -4,6 +4,7 @@
   padding: 2rem;
   position: relative;
   margin-bottom: 1rem;
+  height: 50vh;
 }
 
 .showcase .showcase-container {
@@ -18,9 +19,13 @@ h1 {
   text-shadow: 1px 1px 2px black;
   background-color: rgba(21, 21, 228, 0.3);
 }
-
+.showcase .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .showcase .showcase-content {
-  z-index: 1;
+  z-index: 100;
 }
 
 .showcase .showcase-content p {
